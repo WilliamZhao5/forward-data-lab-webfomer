@@ -22,7 +22,6 @@ python "../Preprocess/[filename]"
 ```
 
 ## File List
-- lxml
 - Preprocess (the input layer)
   - html_tokenizer.py
   - main.py
@@ -33,4 +32,8 @@ python "../Preprocess/[filename]"
   - transformer.py (stacked WebFormer layers)
   - rich_attn.py (attention layers)
 - utils
-  - tensor_utils.py
+  - tensor_utils.py (helper functions used in Models)
+
+## Limitations and Improvements
+
+Although the input layer is finished and can be run, the WebFormer layers are still being built. First off, we still need to test the attention and feedforward layers are working correctly. Also, since I referred to some TensorFlow code, we still need to refactor some codes from TensorFlow to PyTorch. Moreover, the output layer has not been implemented, and we still need to figure out how to import training data to train our model.
